@@ -27,15 +27,16 @@ $ gem install bootstrap-modal-rails
 ## Usage
 
 ### Stylesheets
-
+In your app/assets/stylesheets/application.css
 ```sass
-@import bootstrap-modal
+//= require bootstrap-modal
 ```
 
 ### Javascripts
-```coffeescript
-#= require bootstrap-modal
-#= require bootstrap-modalmanager
+In your app/assets/javascripts/application.js
+```javascript
+//= require bootstrap-modal
+//= require bootstrap-modalmanager
 ```
 
 ## Versioning

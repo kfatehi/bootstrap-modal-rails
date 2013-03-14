@@ -82,6 +82,12 @@
 
 						modal.$element.show();
 
+						if (transition) {       
+							//modal.$element[0].style.display = 'run-in';       
+							modal.$element[0].offsetWidth;
+							//modal.$element.one($.support.transition.end, function () { modal.$element[0].style.display = 'block' });  
+						}
+						
 						modal.layout();
 
 						modal.$element
@@ -90,7 +96,7 @@
 
 						var complete = function () {
 							that.setFocus();
-							modal.$element.triggerHandler('shown');
+							modal.$element.trigger('shown');
 						};
 
 						transition ?
@@ -390,7 +396,7 @@
 			var $this = $(this),
 				data = $this.data('modalmanager');
 
-			if (!data) $this.data('modalmanager', (data = new ModalManager(this, option)))
+			if (!data) $this.data('modalmanager', (data = new ModalManager(this, option)));
 			if (typeof option === 'string') data[option].apply(data, [].concat(args))
 		})
 	};
